@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file
+ * Main module file for the New Relic monitoring integration module.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function monitoring_newrelic_menu() {
+  $items = array();
+
+  $items['admin/config/system/monitoring/newrelic'] = array(
+    'title'             => 'New Relic',
+    'type'              => MENU_LOCAL_TASK,
+    'description'       => 'Configure New Relic monitoring.',
+    'page callback'     => 'drupal_get_form',
+    'page arguments'    => array('monitoring_newrelic_settings_form'),
+    'access arguments'  => array('administer monitoring'),
+    'file'              => 'monitoring_newrelic.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * TODO: write this.
+ *
+ * @throws BadMethodCallException
+ */
+function _monitoring_newrelic_result() {
+  // @TODO: implement this.
+  return t('Not yet implemented.');
+}

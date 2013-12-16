@@ -1,0 +1,6 @@
+name = Monitoring New Relic
+description = Monitoring New Relic integration.
+package = Monitoring
+core = 7.x
+
+dependencies[] = monitoring
